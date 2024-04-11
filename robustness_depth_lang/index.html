@@ -1,1 +1,217 @@
-test
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="Monocular Depth Estimation, Language Guidance">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lang_Depth</title>
+  
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+<style>
+.container {
+  position: relative;
+}
+
+.text-block {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  margin-left: 5px;
+  width: 97.5%;
+  text-align: center;
+  border-radius:10px 10px 0px 0px;
+  border: 1px solid #787878;
+  background-color: #787878;
+  color: white;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar" style="margin-bottom:-40px" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://spright-t2i.github.io/">
+            SPRIGHT (Spatial Relationships in T2I)
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div style="margin-bottom:-80px" class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">On the Robustness of Language Guidance for Low-Level Vision Tasks: Findings from Depth Estimation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://agneetchatterjee.com/">Agneet Chatterjee</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.tejasgokhale.com/">Tejas Gokhale</a><sup>2</sup>,</span>
+			<span class="author-block">
+              <a href="https://www.public.asu.edu/~cbaral/">Chitta Baral</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://faculty.engineering.asu.edu/yezhouyang//">Yezhou Yang</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Arizona State University</span>
+            <span class="author-block"><sup>2</sup>University of Maryland, Balitmore County</span>
+          </div>
+
+          <br> <center><h2 class="title is-3">CVPR 2024</h2></center><br>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/agneet42/robustness_depth_lang"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-max-desktop">
+        <h2 class="title is-3">Abstract</h2>
+    <center>
+      <p>Recent advances in monocular depth estimation have been made by incorporating natural language as additional guidance. 
+        Although yielding impressive results, the impact of the language prior, particularly in terms of generalization and robustness, remains unexplored. 
+        In this paper, we address this gap by quantifying the impact of this prior and introduce methods to benchmark its effectiveness across various settings. 
+        We generate "low-level" sentences that convey object-centric,  three-dimensional spatial relationships, incorporate them as additional language priors and evaluate their downstream impact on depth estimation. 
+        Our key finding is that current language-guided depth estimators perform optimally only with scene-level descriptions and counter-intuitively fare worse with low level descriptions. 
+        Despite leveraging additional data, these methods are not robust to directed adversarial attacks and decline in performance with an increase in distribution shift. 
+        Finally, to provide a foundation for future research, we identify points of failures and offer insights to better understand these shortcomings. 
+        With an increasing number of methods using language for depth estimation, our findings highlight the opportunities and pitfalls that require careful consideration for effective deployment in real-world settings.</p>
+        <div class="hero-body" style='margin-top:-25px;margin-bottom:-25px'>
+		  <center>
+		  <img src="./static/images/supp_zero_shot.png"
+					 class="interpolation-image" width=100%/></center>
+          <p class="content has-text-justified" style='width:100%'>
+            Comparison of generated depth maps, when evaluated in a zero-shot setting, across 5 different scene-types and 4 kinds of natural language guidance. A drop in performance is seen as low-level information is progressively provided to the model.
+		  </p>		
+        </div>
+    </center>
+      </div>
+    </div>
+	
+  
+</div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content" style="margin-top:-70px">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{,
+      title={}, 
+      author={},
+      year={2024},
+      eprint={},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</code></pre>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content" style="margin-top:-70px">
+    <h2 class="title">Acknowledgement</h2>
+    The authors acknowledge resources and support from the Research Computing facilities at Arizona State University. This work was supported by NSF RI grants #1750082 and #2132724. The views and opinions of the authors expressed herein do not necessarily state or reflect those of the funding agencies and employers. 
+    This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>. 
+    Template of this website is borrowed from <a href="https://nerfies.github.io/">nerfies</a> website.
+</code></pre>
+  </div>
+</section>
+
+</body>
+</html>
