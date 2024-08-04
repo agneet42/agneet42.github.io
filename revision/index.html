@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="keywords" content="Monocular Depth Estimation, Language Guidance">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>REVISION (ECCV 2024)</title>
+  <title>REVISION</title>
 
   <script type="text/x-mathjax-config">
   MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
@@ -93,10 +93,10 @@
           </a>
           <div class="navbar-dropdown">
             <a class="navbar-item" href="https://spright-t2i.github.io/">
-              SPRIGHT (Spatial Relationships in T2I)
+              SPRIGHT [ECCV 2024]
             </a>
             <a class="navbar-item" href="https://agneetchatterjee.com/robustness_depth_lang/">
-              Language Guidance Findings on Depth Estimation
+              Language Guidance for Depth Estimation [CVPR 2024]
             </a>
           </div>
         </div>
@@ -121,9 +121,9 @@
               <span class="author-block">
                 <a href="https://www.tejasgokhale.com/">Tejas Gokhale</a><sup>2</sup>,</span>
               <span class="author-block">
-                <a href="https://www.public.asu.edu/~cbaral/">Chitta Baral</a><sup>1</sup>,</span>
-              <span class="author-block">
-                <a href="https://faculty.engineering.asu.edu/yezhouyang/">Yezhou Yang</a><sup>1</sup>
+                <a href="https://faculty.engineering.asu.edu/yezhouyang/">Yezhou Yang</a><sup>1</sup>,
+                <span class="author-block">
+                  <a href="https://www.public.asu.edu/~cbaral/">Chitta Baral</a><sup>1</sup></span>
               </span>
             </div>
 
@@ -184,27 +184,12 @@
         <div class="column is-max-desktop">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-            <p>Text-to-Image (T2I) and multimodal large language models (MLLMs)
-              have been adopted in solutions for several computer vision and
-              multimodal learning tasks.
-              However, it has been found that such vision-language models lack the ability
-              to correctly reason over spatial relationships. </p>
-
-            <p>To tackle this shortcoming, we develop the REVISION framework
-              which improves spatial fidelity in vision-language models.
-              REVISION is a 3D rendering based pipeline that generates spatially
-              accurate synthetic images, given a textual prompt. </p>
-            <p>REVISION is an extendable framework, which currently supports 100+ 3D assets,
-              11 spatial relationships, all with diverse camera perspectives and backgrounds.
-              Leveraging images from REVISION as additional guidance in a training-free manner
-              consistently improves the spatial consistency of T2I models across all spatial
-              relationships, achieving competitive performance on the VISOR and T2I-CompBench benchmarks. </p>
-
-            <p>We also design RevQA, a question-answering benchmark to evaluate the spatial
-              reasoning abilities of MLLMs, and find that state-of-the-art models are not
-              robust to complex spatial reasoning under adversarial settings.
-              Our results and findings indicate that utilizing rendering-based frameworks
-              is an effective approach for developing spatially-aware generative models. </p>
+            <p>Text-to-Image (T2I) and multimodal large language models (MLLMs) have been adopted in solutions for several computer vision and multimodal learning tasks. 
+              However, it has been found that such vision-language models lack the ability to correctly reason over spatial relationships. 
+              To tackle this shortcoming, we develop the REVISION framework which improves spatial fidelity in vision-language models. 
+              REVISION is a 3D rendering based pipeline that generates spatially accurate synthetic images, given a textual prompt. 
+            REVISION is an extendable framework, which currently supports 100+ 3D assets, 11 spatial relationships, all with diverse camera perspectives and backgrounds. Leveraging images from REVISION as additional guidance in a training-free manner consistently improves the spatial consistency of T2I models across all spatial relationships, achieving competitive performance on the VISOR and T2I-CompBench benchmarks. 
+            We also design RevQA, a question-answering benchmark to evaluate the spatial reasoning abilities of MLLMs, and find that state-of-the-art models are not robust to complex spatial reasoning under adversarial settings. Our results and findings indicate that utilizing rendering-based frameworks is an effective approach for developing spatially-aware generative models.
           </div>
         </div>
       </div>
@@ -213,10 +198,10 @@
 
   <section class="section">
     <div class="container is-centered is-max-desktop" style="margin-top:-70px">
-      <h2 class="title is-3">REVISION, the Rendering Tool</h2>
+      <h2 class="title is-3">The REVISION Pipeline</h2>
       <img src="./static/images/revision_genenator.png">
       <div class="content has-text-justified">
-        <p>REVISION parses a prompt into assets (objects) and the spatial relationship
+        <p>REVISION parses a prompt into assets (objects) along with the spatial relationship
           between them and synthesizes a symbolic image in Blender, placing the respective
           object assets at coordinates corresponding to the parsed spatial relationship.</p>
       </div>
@@ -225,13 +210,12 @@
   </section>
   <section class="section">
     <div class="container is-centered is-max-desktop" style="margin-top:-70px">
-      <h2 class="title is-3">T2I Pipeline with REVISION</h2>
+      <h2 class="title is-3">REVISION + Text to Image</h2>
       <img src="./static/images/eccv_t2i_pipelines.png">
       <div class="content has-text-justified">
-        <p>Given a user-provided input prompt T, we generate a corresponding synthetic
-          image x(g) using REVISION. With input prompt $T$ and guidance x(g),
-          we perform training-free image synthesis based on existing T2I pipelines
-          such as Stable Diffusion or ControlNet to obtain a spatially accurate image.</p>
+        <p>Given an input prompt $T$, we generate a corresponding synthetic
+          image using REVISION. With input prompt $T$ and the synthetic image as guidance, 
+          we perform training-free image synthesis based on existing Text to Image  pipelines to obtain a spatially accurate image.</p>
       </div>
     </div>
     </div>
@@ -239,7 +223,14 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content" style="margin-top:-70px">
       <h2 class="title">BibTeX</h2>
-      <pre>TBD</pre>
+      <pre><code>@misc{TBD,
+        title={REVISION: Rendering Tools Enable Spatial Fidelity in Vision-Language Models}, 
+        author={Agneet Chatterjee and Yiran Luo and Tejas Gokhale and Yezhou Yang and Chitta Baral},
+        year={2024},
+        eprint={TBD},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV}
+  }</code></pre>
     </div>
   </section>
 
