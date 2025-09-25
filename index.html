@@ -11,26 +11,42 @@
   
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
 
-    <style>
-    .toggle-container {
-      text-align: right;
-      margin-bottom: -15px; /* Adjust to align with the heading */
-    }
-    .toggle-link {
-      cursor: pointer;
-      color: #888; /* Color for the inactive option */
-      font-weight: 500;
-      margin: 0 4px;
-      transition: color 0.2s ease-in-out;
-    }
-    .toggle-link.active {
-      color: #000; /* Color for the active option */
-      font-weight: 700;
-    }
-    .toggle-link:not(.active):hover {
-      color: #444; /* Hover color for the inactive option */
-    }
-  </style>
+<style>
+
+  heading {
+    display: block;
+    margin: 0 0 0 0; 
+  }
+  .toggle-container {
+    text-align: left;
+    margin: 12px 0 0 0; 
+  }
+
+  #papers {
+    margin-top: 2px;         
+    border-spacing: 0;       
+  }
+
+  #papers > tbody > tr:first-child > td {
+    padding-top: 6px !important; 
+  }
+
+  .toggle-link {
+    cursor: pointer;
+    color: #888;
+    font-weight: 500;
+    margin: 0 4px 0 0;
+    transition: color 0.2s ease-in-out;
+  }
+  .toggle-link.active {
+    color: #000;
+    font-weight: 700;
+  }
+  .toggle-link:not(.active):hover {
+    color: #444;
+  }
+</style>
+
 
 </head>
 
@@ -47,7 +63,8 @@
                     <name>Agneet Chatterjee</name>
                   </p>
                   <p>I am a Computer Science PhD student at Arizona State University, where I am advised by <a href="https://www.public.asu.edu/~cbaral/">Chitta Baral</a> and <a href="https://yezhouyang.engineering.asu.edu/">Yezhou Yang</a>. I have also worked as a student researcher at <a href="https://stability.ai/"> Stability AI</a> and <a href="https://llnl.gov/"> LLNL</a>.
-                  My current research interests are in <span style="background-color: #7ed4b1; padding: 0.5px 0.5px; border-radius: 0.5px; font-weight: 500;"> developing controllable image and video generative models.</span>
+                  My current research interests are in <span style="background-color: #fff3a3; padding: 0 2px;">developing controllable image and video generative models.</span>
+
                   </p>
                   <p>
                     I received my Bachelors in Computer Science from <a href="https://jadavpuruniversity.in/">Jadavpur University</a> in 2019.
