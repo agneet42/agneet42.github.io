@@ -82,7 +82,6 @@ p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
-  line-height: 1.45;
 }
 
 strong {
@@ -90,145 +89,20 @@ strong {
   font-size: 14px;
 }
 
-.heading {
+heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
-  font-weight: 700;
-  margin: 0;
 }
 
-.papertitle {
+papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700;
 }
 
-.name-wrap {
-  text-align: center;
-  margin: 0 0 8px 0;
-}
-
-.name {
+name {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.page,
-.bio-table,
-.section-table,
-.papers-table {
-  width: 100%;
-  max-width: 800px;
-  border: 0;
-  border-spacing: 0;
-  border-collapse: separate;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.papers-table {
-  max-width: 800px;
-}
-
-.bio-text {
-  padding: 2.5%;
-  width: 63%;
-  vertical-align: middle;
-}
-
-.bio-photo {
-  padding: 2.5%;
-  width: 37%;
-  max-width: 37%;
-  vertical-align: middle;
-}
-
-.profile-img {
-  width: 100%;
-  max-width: 100%;
-  display: block;
-}
-
-.section-cell {
-  padding: 2.5%;
-  vertical-align: middle;
-  width: 100%;
-}
-
-.news-section {
-  margin-top: -10px;
-}
-
-.news-scroll {
-  width: 100%;
-  overflow-y: auto;
-  height: 100px;
-  margin-top: 8px;
-}
-
-.news-scroll ul {
-  margin: 0;
-  padding-left: 20px;
-}
-
-.pubs-header {
-  padding: 20px;
-  width: 100%;
-  vertical-align: middle;
-}
-
-.paper-thumb {
-  padding: 15px;
-  width: 25%;
-  vertical-align: middle;
-}
-
-.thumb-wrap {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.thumb-wrap img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-}
-
-.paper-meta {
-  width: 75%;
-  vertical-align: middle;
-}
-
-.paper-links {
-  margin: 4px 0 0 0;
-}
-
-.icon-row {
-  text-align: center;
-}
-
-.icon-row a {
-  margin: 0 5px;
-}
-
-.icon-sep {
-  color: #999;
-}
-
-mark {
-  background-color: #ffffd0;
-  padding: 2px 4px;
-}
-
-.footer {
-  text-align: center;
-  font-size: small;
 }
 
 .one {
@@ -254,46 +128,4 @@ mark {
 
 span.highlight {
   background-color: #ffffd0;
-}
-
-@media (max-width: 640px) {
-  .bio-row {
-    display: block;
-  }
-
-  .bio-text,
-  .bio-photo {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-
-  .bio-photo {
-    padding-top: 0;
-  }
-
-  .profile-img {
-    max-width: 220px;
-    margin: 0 auto;
-  }
-
-  .paper-thumb,
-  .paper-meta {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  .paper-thumb {
-    padding-bottom: 0;
-  }
-
-  .thumb-wrap img {
-    max-height: 160px;
-  }
-
-  .name {
-    font-size: 28px;
-  }
 }
